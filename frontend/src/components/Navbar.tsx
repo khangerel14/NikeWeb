@@ -14,10 +14,16 @@ export const Navbar = () => {
             </button>
           </div>
           <div className="flex items-center gap-2 text-xs font-semibold">
-            <button>Find a Store</button>
-            <button>Help</button>
-            <button>Join Us</button>
-            <button>Sign In</button>
+            <button className="hover:text-gray-100 border-r pr-2 border-black">
+              Find a Store
+            </button>
+            <button className="hover:text-gray-100 border-r pr-2 border-black">
+              Help
+            </button>
+            <button className="hover:text-gray-100 border-r pr-2 border-black">
+              Join Us
+            </button>
+            <button className="hover:text-gray-100 ">Sign In</button>
           </div>
         </div>
       </div>
