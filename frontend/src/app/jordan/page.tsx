@@ -1,5 +1,13 @@
+"use client";
+
+import { Navbar } from "@/components";
+
 const Page = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 };
 
 export default Page;
