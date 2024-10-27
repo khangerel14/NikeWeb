@@ -66,7 +66,6 @@ export const Navbar = () => {
             <button onClick={() => router.push('/kids')}>Kids</button>
             <button onClick={() => router.push('/jordan')}>Jordan</button>
             <button onClick={() => router.push('/sales')}>Sale</button>
-            <button onClick={openOrNot}>lick mine</button>
           </div>
           <div className='flex items-center gap-4'>
             <input

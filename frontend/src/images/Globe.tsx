@@ -1,6 +1,6 @@
-import React from '@/../public/favorite.svg';
+import React from '@/../public/globe.svg';
 
-export const Favourite = () => {
+export const Globe = () => {
   return (
     <div>
       <img src={React.src} alt='' width={20} />

@@ -1,3 +1,5 @@
+import { Globe } from '@/images';
+
 type Ulti = {
   title: string;
   btn: string[];
@@ -54,21 +56,29 @@ export const Footer = () => {
   return (
     <div className='w-[1344px] flex flex-col mx-auto'>
       <hr />
-      <div className='flex items-center'>
+      <div className='flex items-center w-full justify-between font-medium gap-2'>
         {data.map((e: Ulti, index: number) => {
           return (
-            <div key={index} className='flex flex-col gap-5 h-96'>
-              <button>{e.title}</button>
-              <div className='flex flex-col gap-2'>
+            <div
+              key={index}
+              className='flex flex-col gap-7 h-96 text-start items-start w-[259px]'
+            >
+              <button className='text-sm'>{e.title}</button>
+              <div className='flex flex-col gap-2 items-start'>
                 {e.btn.map((buttonText, btnIndex) => (
-                  <button key={btnIndex}>{buttonText}</button>
+                  <button key={btnIndex} className='text-gray-500'>
+                    {buttonText}
+                  </button>
                 ))}
               </div>
             </div>
           );
         })}
-        <div>
-          <button>United States</button>
+        <div className='flex justify-end h-96'>
+          <button className='text-gray-500 flex items-start h-14 gap-2'>
+            <Globe />
+            United States
+          </button>
         </div>
       </div>
       <div></div>
