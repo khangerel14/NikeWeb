@@ -1,11 +1,12 @@
-"use client";
+'use client';
 
-import { Navbar } from "@/components";
+import { Footer, Navbar } from '@/components';
 
 const Page = () => {
   return (
     <div>
       <Navbar />
+      <Footer />
     </div>
   );
 };

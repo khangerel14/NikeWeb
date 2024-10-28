@@ -2,7 +2,7 @@
 
 import { Cart, Converse, Favourite, Jordan, Nike } from '@/images';
 import { useRouter } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export const Navbar = () => {
   const router = useRouter();
