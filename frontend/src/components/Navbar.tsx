@@ -8,9 +8,11 @@ export const Navbar = () => {
   const router = useRouter();
   const [values, setValues] = useState('');
   const [open, setOpen] = useState(false);
+  console.log(values);
 
   const openOrNot = () => {
     setOpen(!open);
+    console.log(open);
   };
   return (
     <div className='flex flex-col'>
@@ -26,25 +28,25 @@ export const Navbar = () => {
           </div>
           <div className='flex items-center gap-3 text-xs font-semibold'>
             <button
-              className='hover:text-gray-600 border-black pr-3 border-r'
+              className='hover:text-gray-500 border-black pr-3 border-r'
               onClick={() => router.push('/retail')}
             >
               Find a Store
             </button>
             <button
-              className='hover:text-gray-600 border-black pr-3 border-r'
+              className='hover:text-gray-500 border-black pr-3 border-r'
               onClick={() => router.push('/help')}
             >
               Help
             </button>
             <button
-              className='hover:text-gray-600 border-black pr-3 border-r'
+              className='hover:text-gray-500 border-black pr-3 border-r'
               onClick={() => router.push('/membership')}
             >
               Join Us
             </button>
             <button
-              className='hover:text-gray-600'
+              className='hover:text-gray-500'
               onClick={() => router.push('/signin')}
             >
               Sign In
@@ -66,6 +68,7 @@ export const Navbar = () => {
             <button onClick={() => router.push('/kids')}>Kids</button>
             <button onClick={() => router.push('/jordan')}>Jordan</button>
             <button onClick={() => router.push('/sales')}>Sale</button>
+            <button onClick={openOrNot}>openOrnot</button>
           </div>
           <div className='flex items-center gap-4'>
             <input
@@ -75,10 +78,16 @@ export const Navbar = () => {
               value={values}
               onChange={(e) => setValues(e.target.value)}
             />
-            <button onClick={() => router.push('/favourites')}>
+            <button
+              className='flex justify-center items-center hover:bg-gray-200 h-8 w-8 rounded-full'
+              onClick={() => router.push('/favourites')}
+            >
               <Favourite />
             </button>
-            <button onClick={() => router.push('/cart')}>
+            <button
+              className='flex justify-center items-center hover:bg-gray-200 h-8 w-8 rounded-full'
+              onClick={() => router.push('/cart')}
+            >
               <Cart />
             </button>
           </div>

@@ -2,6 +2,7 @@
 
 import { Globe } from '@/images';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+import { HelpHover } from './HelpHover';
 
 type Ulti = {
   title: string;
@@ -59,14 +60,10 @@ export const Footer = () => {
   const params = useSearchParams();
   const path = usePathname();
   const router = useRouter();
-  console.log(params);
-  console.log(path);
 
   return (
     <div className='w-[1344px] flex flex-col mx-auto'>
-      <button onClick={() => router.push(`?newversion&latestversion${path}`)}>
-        pushing ma bro
-      </button>
+      <HelpHover />
       <hr />
       <div className='flex items-center w-full justify-between mt-16'>
         <div className='flex items-center w-full font-medium gap-2'>
