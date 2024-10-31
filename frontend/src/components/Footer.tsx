@@ -2,7 +2,6 @@
 
 import { Globe } from '@/images';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
-import { HelpHover } from './HelpHover';
 
 type Ulti = {
   title: string;
@@ -63,7 +62,6 @@ export const Footer = () => {
 
   return (
     <div className='w-[1344px] flex flex-col mx-auto'>
-      <HelpHover />
       <hr />
       <div className='flex items-center w-full justify-between mt-16'>
         <div className='flex items-center w-full font-medium gap-2'>

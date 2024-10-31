@@ -8,6 +8,7 @@ export const Card = () => {
   return (
     <div className='flex w-[1344px] justify-between items-center mx-auto my-20 h-fit flex-wrap gap-5'>
       {(clothesData || [])
+        .slice(0, 8)
         .filter((elem: any) =>
           elem.title?.toLowerCase().includes(values?.toLowerCase())
         )
@@ -17,7 +18,11 @@ export const Card = () => {
               className='relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md pt-6'
               key={elem.id}
             >
-              <div className='relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600'></div>
+              <div className='relative mx-4 -mt-6 h-64 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600 hover:scale-110 transition ease-out'>
+                {elem.images.map((imageUrl: string, index: number) => (
+                  <img key={index} src={imageUrl} alt={`Image ${index + 1}`} />
+                ))}
+              </div>
               <div className='p-6'>
                 <h5 className='mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased overflow-hidden h-6'>
                   {elem.title}
