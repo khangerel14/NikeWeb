@@ -3,10 +3,12 @@
 import { Cart, Converse, Favourite, Jordan, Nike } from '@/images';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { ClothesContext } from '@/context/ClothesContext';
 
 export const Navbar = () => {
+  const { values, setValues }: any = useContext(ClothesContext);
   const router = useRouter();
-  const [values, setValues] = useState('');
   const [open, setOpen] = useState(false);
   console.log(values);
 

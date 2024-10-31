@@ -1,10 +1,16 @@
-import { Footer, Navbar } from "@/components";
+'use client';
 
-export default function Home() {
+import { Card, Footer, Navbar } from '@/components';
+import ClothesContextProvider from '@/context/ClothesContext';
+
+const Page = () => {
   return (
-    <div>
+    <ClothesContextProvider>
       <Navbar />
+      <Card />
       <Footer />
-    </div>
+    </ClothesContextProvider>
   );
-}
+};
+
+export default Page;

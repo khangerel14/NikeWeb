@@ -1,13 +1,14 @@
 'use client';
 
 import { Footer, Navbar } from '@/components';
+import ClothesContextProvider from '@/context/ClothesContext';
 
 const Page = () => {
   return (
-    <div>
+    <ClothesContextProvider>
       <Navbar />
       <Footer />
-    </div>
+    </ClothesContextProvider>
   );
 };
 
