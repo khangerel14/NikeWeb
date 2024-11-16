@@ -35,25 +35,27 @@ export const Paginations = () => {
   };
 
   return (
-    <Pagination>
-      <PaginationContent>
-        <PaginationItem>
-          <PaginationPrevious onClick={handlePrevious} />
-        </PaginationItem>
-        {[...Array(totalPages)].map((_, index) => (
-          <PaginationItem key={index}>
-            <PaginationLink
-              isActive={currentPage === index + 1}
-              onClick={() => goToPage(index + 1)}
-            >
-              {index + 1}
-            </PaginationLink>
+    <div className='w-[1344px] mx-auto overflow-hidden'>
+      <Pagination>
+        <PaginationContent>
+          <PaginationItem>
+            <PaginationPrevious onClick={handlePrevious} />
           </PaginationItem>
-        ))}
-        <PaginationItem>
-          <PaginationNext onClick={handleNext} />
-        </PaginationItem>
-      </PaginationContent>
-    </Pagination>
+          {[...Array(totalPages)].map((_, index) => (
+            <PaginationItem key={index}>
+              <PaginationLink
+                isActive={currentPage === index + 1}
+                onClick={() => goToPage(index + 1)}
+              >
+                {index + 1}
+              </PaginationLink>
+            </PaginationItem>
+          ))}
+          <PaginationItem>
+            <PaginationNext onClick={handleNext} />
+          </PaginationItem>
+        </PaginationContent>
+      </Pagination>
+    </div>
   );
 };

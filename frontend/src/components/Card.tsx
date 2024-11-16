@@ -20,7 +20,12 @@ export const Card = () => {
             >
               <div className='relative mx-4 -mt-6 h-64 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600 hover:scale-110 transition ease-out'>
                 {elem.images.map((imageUrl: string, index: number) => (
-                  <img key={index} src={imageUrl} alt={`Image ${index + 1}`} />
+                  <img
+                    key={index}
+                    src={imageUrl}
+                    alt={`Image ${index + 1}`}
+                    className='hover:scale-110 transition ease-in-out'
+                  />
                 ))}
               </div>
               <div className='p-6'>

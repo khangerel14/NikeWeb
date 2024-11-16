@@ -1,6 +1,6 @@
 'use client';
 
-import { Globe } from '@/images';
+import { Globe } from '@/assets/icons';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
 type Ulti = {

@@ -1,6 +1,6 @@
 'use client';
 
-import { Cart, Converse, Favourite, Jordan, Nike } from '@/images';
+import { Cart, Converse, Favourite, Jordan, Nike } from '@/assets/icons';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useContext } from 'react';
@@ -19,7 +19,7 @@ export const Navbar = () => {
   return (
     <div className='flex flex-col'>
       <div className='flex items-center bg-gray-100 h-9'>
-        <div className='flex justify-between w-[1344px] mx-auto'>
+        <div className='flex justify-between container mx-auto'>
           <div className='flex items-center gap-6'>
             <button onClick={() => router.push('/jordan')}>
               <Jordan />
@@ -57,7 +57,7 @@ export const Navbar = () => {
         </div>
       </div>
       <div className='bg-white'>
-        <div className='flex justify-between w-[1344px] items-center mx-auto h-14'>
+        <div className='flex justify-between container items-center mx-auto h-14'>
           <div>
             <button onClick={() => router.push('/')}>
               <Nike />
