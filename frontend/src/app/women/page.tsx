@@ -1,6 +1,7 @@
 'use client';
 
-import { Card, Footer, Navbar, Paginations } from '@/components';
+import { Card, Paginations } from '@/components';
+import { Footer, Navbar } from '@/features';
 import ClothesContextProvider from '@/context/ClothesContext';
 
 const Page = () => {
