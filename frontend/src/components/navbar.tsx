@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { ClothesContext } from '@/context/ClothesContext';
+import { Separator } from '@radix-ui/react-separator';
 
 export const Navbar = () => {
   const { values, setValues }: any = useContext(ClothesContext);
@@ -30,23 +31,26 @@ export const Navbar = () => {
           </div>
           <div className='flex items-center gap-3 text-xs font-semibold'>
             <button
-              className='hover:text-gray-500 border-black pr-3 border-r'
+              className='hover:text-gray-500'
               onClick={() => router.push('/retail')}
             >
               Find a Store
             </button>
+            <Separator className='h-3 w-px bg-black' />
             <button
-              className='hover:text-gray-500 border-black pr-3 border-r'
+              className='hover:text-gray-500'
               onClick={() => router.push('/help')}
             >
               Help
             </button>
+            <Separator className='h-3 w-px bg-black' />
             <button
-              className='hover:text-gray-500 border-black pr-3 border-r'
+              className='hover:text-gray-500'
               onClick={() => router.push('/membership')}
             >
               Join Us
             </button>
+            <Separator className='h-3 w-px bg-black' />
             <button
               className='hover:text-gray-500'
               onClick={() => router.push('/signin')}

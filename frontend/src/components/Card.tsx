@@ -6,7 +6,7 @@ import { ClothesContext } from '@/context/ClothesContext';
 export const Card = () => {
   const { clothesData, values } = useContext(ClothesContext) || {};
   return (
-    <div className='flex w-[1344px] justify-between items-center mx-auto my-20 h-fit flex-wrap gap-5'>
+    <div className='flex container justify-between items-center mx-auto my-20 h-fit flex-wrap gap-5'>
       {(clothesData || [])
         .slice(0, 8)
         .filter((elem: any) =>
