@@ -35,7 +35,7 @@ export const Paginations = () => {
   };
 
   return (
-    <div className='w-[1344px] mx-auto overflow-hidden'>
+    <div className='w-[1344px] mx-auto overflow-hidden py-5'>
       <Pagination>
         <PaginationContent>
           <PaginationItem>

@@ -8,7 +8,13 @@ import { ClothesContext } from '@/context/ClothesContext';
 import { Separator } from '@radix-ui/react-separator';
 
 export const Navbar = () => {
-  const { values, setValues }: any = useContext(ClothesContext);
+  const context = useContext(ClothesContext);
+
+  if (!context) {
+    throw new Error('Navbar must be used within a ClothesContextProvider');
+  }
+
+  const { values, setValues } = context;
   const router = useRouter();
   const [open, setOpen] = useState(false);
   console.log(values);
