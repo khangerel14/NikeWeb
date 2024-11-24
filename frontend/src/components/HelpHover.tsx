@@ -2,33 +2,21 @@ export const HelpHover = () => {
   return (
     <div className='menu'>
       <div className='item'>
-        <a href='#' className='link'>
+        <button className='link'>
           <span>Help</span>
-        </a>
+        </button>
         <div className='submenu'>
           <div className='submenu-item'>
-            <a href='#' className='submenu-link'>
-              {' '}
-              Development{' '}
-            </a>
+            <button className='submenu-link'>Development</button>
           </div>
           <div className='submenu-item'>
-            <a href='#' className='submenu-link'>
-              {' '}
-              Design{' '}
-            </a>
+            <button className='submenu-link'> Design </button>
           </div>
           <div className='submenu-item'>
-            <a href='#' className='submenu-link'>
-              {' '}
-              Marketing{' '}
-            </a>
+            <button className='submenu-link'> Marketing </button>
           </div>
           <div className='submenu-item'>
-            <a href='#' className='submenu-link'>
-              {' '}
-              SEO{' '}
-            </a>
+            <button className='submenu-link'> SEO </button>
           </div>
         </div>
       </div>

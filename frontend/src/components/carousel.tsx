@@ -14,7 +14,7 @@ export function CarouselDemo() {
     <Carousel className='mx-auto pt-10 w-full max-w-xs'>
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index}>
+          <CarouselItem key={length}>
             <div className='p-1'>
               <Card>
                 <CardContent className='flex aspect-square items-center justify-center p-6'>

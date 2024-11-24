@@ -2,8 +2,7 @@
 
 import { Cart, Converse, Favourite, Jordan, Nike } from '@/assets/icons';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import { ClothesContext } from '@/context/ClothesContext';
 import { Separator } from '@radix-ui/react-separator';
 
