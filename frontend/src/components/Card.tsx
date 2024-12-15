@@ -15,7 +15,7 @@ export const Card = () => {
   const { clothesData = [], values = '' } = useContext(ClothesContext) || {};
 
   return (
-    <div className='flex container justify-between items-center mx-auto my-20 h-fit flex-wrap gap-5'>
+    <div className='grid container xl:grid-cols-4 md:grid-cols-2 grid-cols-1 items-center mx-auto my-20 gap-4'>
       {clothesData
         .slice(0, 8)
         .filter((elem: ProductProps) =>
@@ -23,7 +23,7 @@ export const Card = () => {
         )
         .map((elem: ProductProps) => (
           <div
-            className='relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md pt-6'
+            className='relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md pt-6'
             key={elem.id}
           >
             <div className='relative mx-4 -mt-6 h-64 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600 hover:scale-110 transition ease-out'>
