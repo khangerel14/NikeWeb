@@ -9,12 +9,11 @@ import {
   PaginationPrevious,
 } from '@/components/ui/pagination';
 import { useContext, useState } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { ClothesContext } from '@/context/ClothesContext';
 
 export const Paginations = () => {
   const { clothesData } = useContext(ClothesContext) || {};
-  const pathname = usePathname();
   const router = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil((clothesData?.length ?? 0) / 8);

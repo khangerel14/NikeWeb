@@ -1,7 +1,6 @@
 'use client';
 
-import { Card, Paginations } from '@/components';
-import { Navbar, Footer } from '@/components';
+import { Navbar, Footer, Card, Paginations } from '@/components';
 import { CarouselDemo } from '@/components/carousel';
 import ClothesContextProvider from '@/context/ClothesContext';
 
