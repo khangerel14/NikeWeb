@@ -1,7 +1,7 @@
 'use client';
 
 import { Globe } from '@/assets/icons';
-import { useSearchParams, usePathname, useRouter } from 'next/navigation';
+import { v4 as uuidv4 } from 'uuid';
 
 type Ulti = {
   title: string;
@@ -56,25 +56,21 @@ const data: Ulti[] = [
 ];
 
 export const Footer = () => {
-  const params = useSearchParams();
-  const path = usePathname();
-  const router = useRouter();
-
   return (
     <div className='w-[1344px] flex flex-col mx-auto'>
       <hr />
       <div className='flex items-center w-full justify-between mt-16'>
         <div className='flex items-center w-full font-medium gap-2'>
-          {data.map((e: Ulti, index: number) => {
+          {data.map((e: Ulti) => {
             return (
               <div
-                key={index}
+                key={uuidv4()}
                 className='flex flex-col gap-7 h-96 text-start items-start w-[259px]'
               >
                 <button className='text-sm'>{e.title}</button>
                 <div className='flex flex-col gap-2 items-start'>
-                  {e.btn.map((buttonText, btnIndex) => (
-                    <button key={btnIndex} className='text-gray-500'>
+                  {e.btn.map((buttonText) => (
+                    <button key={uuidv4()} className='text-gray-500'>
                       {buttonText}
                     </button>
                   ))}

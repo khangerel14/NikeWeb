@@ -1,9 +1,6 @@
-import React from '@/../public/bag.svg';
+import bag from '@/../public/bag.svg';
+import Image from 'next/image';
 
 export const Cart = () => {
-  return (
-    <div>
-      <img src={React.src} alt='' width={22} height={22} />
-    </div>
-  );
+  return <Image src={bag} alt='card' width={22} height={22} />;
 };

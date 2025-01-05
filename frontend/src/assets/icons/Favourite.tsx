@@ -1,9 +1,6 @@
 import React from '@/../public/favorite.svg';
+import Image from 'next/image';
 
 export const Favourite = () => {
-  return (
-    <div>
-      <img src={React.src} alt='' width={20} />
-    </div>
-  );
+  return <Image src={React.src} alt='favourite' width={20} height={20} />;
 };

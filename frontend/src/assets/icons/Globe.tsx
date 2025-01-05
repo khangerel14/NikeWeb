@@ -1,9 +1,6 @@
 import React from '@/../public/globe.svg';
+import Image from 'next/image';
 
 export const Globe = () => {
-  return (
-    <div>
-      <img src={React.src} alt='' width={20} />
-    </div>
-  );
+  return <Image src={React.src} alt='globe' width={20} height={20} />;
 };

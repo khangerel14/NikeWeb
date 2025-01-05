@@ -1,9 +1,7 @@
-import React from '@/../public/nike.svg';
+import React from 'react';
+import Image from 'next/image';
+import nikeSrc from '@/../public/nike.svg';
 
 export const Nike = () => {
-  return (
-    <div>
-      <img src={React.src} />
-    </div>
-  );
+  return <Image src={nikeSrc} alt='nike' />;
 };
