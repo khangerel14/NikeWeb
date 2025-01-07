@@ -28,7 +28,7 @@ export const Navbar = () => {
         <div className='flex justify-between container mx-auto'>
           <div className='flex items-center gap-6'>
             <button onClick={() => router.push('/jordan')}>
-              <Jordan />
+              <Jordan size={20} />
             </button>
             <button onClick={() => router.push('/converse')}>
               <Converse />
