@@ -7,6 +7,8 @@ import { ClothesContext } from '@/context/ClothesContext';
 import { Separator } from '@radix-ui/react-separator';
 
 export const Navbar = () => {
+  const router = useRouter();
+  const [open, setOpen] = useState(false);
   const context = useContext(ClothesContext);
 
   if (!context) {
@@ -14,18 +16,17 @@ export const Navbar = () => {
   }
 
   const { values, setValues } = context;
-  const router = useRouter();
-  const [open, setOpen] = useState(false);
   console.log(values);
 
-  const openOrNot = () => {
+  const handleClick = () => {
     setOpen(!open);
     console.log(open);
   };
+
   return (
-    <div className='flex flex-col'>
-      <div className='flex items-center bg-gray-100 h-9'>
-        <div className='flex justify-between container mx-auto'>
+    <div className='flex flex-col fixed inset-0 z-10'>
+      <div className='bg-gray-100'>
+        <div className='flex justify-between container mx-auto h-9 items-center'>
           <div className='flex items-center gap-6'>
             <button onClick={() => router.push('/jordan')}>
               <Jordan size={20} />
@@ -79,7 +80,7 @@ export const Navbar = () => {
             <button onClick={() => router.push('/kids')}>Kids</button>
             <button onClick={() => router.push('/jordan')}>Jordan</button>
             <button onClick={() => router.push('/sales')}>Sale</button>
-            <button onClick={openOrNot}>openOrnot</button>
+            <button onClick={handleClick}>openOrnot</button>
           </div>
           <div className='flex items-center gap-4'>
             <input

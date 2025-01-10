@@ -2,8 +2,8 @@ import { Jordan, Nike } from '@/assets/icons';
 
 export const SignIn = () => {
   return (
-    <div className='container w-[520px] mx-auto'>
-      <div className='flex flex-col gap-9 mt-2'>
+    <div className='container w-[520px] mx-auto mt-10'>
+      <div className='flex flex-col gap-9'>
         <div className='flex'>
           <Nike />
           <Jordan size={40} />
@@ -22,7 +22,7 @@ export const SignIn = () => {
         />
         <p className='text-gray-500'>
           By continuing, I agree to Nike’s
-          <span className='underline pl-1'>Privacy Policy</span> and
+          <span className='underline pl-1'>Privacy Policy</span> and &nbsp;
           <span className='underline pl-1'>Terms of Use.</span>
         </p>
         <div className='flex justify-end'>

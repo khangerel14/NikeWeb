@@ -12,7 +12,7 @@ import {
 
 export function CarouselDemo() {
   return (
-    <Carousel className='mx-auto pt-10 w-full max-w-xs'>
+    <Carousel className='mx-auto pt-10 mt-20 w-full max-w-xs'>
       <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={uuidv4()}>

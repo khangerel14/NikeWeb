@@ -1,8 +1,8 @@
 'use client';
 
 import { useContext, useEffect, useState } from 'react';
-import { ClothesContext } from '@/context/ClothesContext';
 import Image from 'next/image';
+import { ClothesContext } from '@/context/ClothesContext';
 import { v4 as uuidv4 } from 'uuid';
 
 type ProductProps = Readonly<{
@@ -38,7 +38,7 @@ export const Card = () => {
   }, [clothesData]);
 
   return (
-    <div className='grid container xl:grid-cols-4 md:grid-cols-2 grid-cols-1 items-center mx-auto my-20 gap-4'>
+    <div className='grid container xl:grid-cols-4 md:grid-cols-2 grid-cols-1 mx-auto my-20 gap-4'>
       {clothesData
         .slice(0, 8)
         .filter((elem: ProductProps) =>
@@ -55,7 +55,7 @@ export const Card = () => {
               elem.images[currentImageIndex[idx]] !== '' ? (
                 <Image
                   key={uuidv4()}
-                  src={elem.images[currentImageIndex[idx]]}
+                  src={`/${elem.images[currentImageIndex[idx]]}`}
                   alt={`Image ${idx + 1}`}
                   className='hover:scale-110 transition ease-in-out'
                   layout='responsive'

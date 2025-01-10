@@ -1,14 +1,13 @@
 'use client';
 
 import { Footer, Navbar } from '@/features';
-import { Card, Paginations } from '@/components';
+import { Paginations } from '@/components';
 import ClothesContextProvider from '@/context/ClothesContext';
 
 const Page = () => {
   return (
     <ClothesContextProvider>
       <Navbar />
-      <Card />
       <Paginations />
       <Footer />
     </ClothesContextProvider>
