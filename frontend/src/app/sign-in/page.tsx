@@ -1,12 +1,12 @@
 'use client';
 
-import { Navbar, SignIn } from '@/features';
+import { NavbarSection, SignIn } from '@/features';
 import ClothesContextProvider from '@/context/ClothesContext';
 
 const Page = () => {
   return (
     <ClothesContextProvider>
-      <Navbar />
+      <NavbarSection />
       <SignIn />
     </ClothesContextProvider>
   );

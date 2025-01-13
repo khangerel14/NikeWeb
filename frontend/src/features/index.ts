@@ -1,4 +1,4 @@
-export * from './navbar';
+export * from './navbar-section';
 
 export * from './footer';
 

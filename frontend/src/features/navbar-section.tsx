@@ -1,14 +1,11 @@
-'use client';
-
 import { Cart, Converse, Favourite, Jordan, Nike } from '@/assets/icons';
-import { useRouter } from 'next/navigation';
-import { useState, useContext } from 'react';
+import { Separator } from '@/components/ui/separator';
 import { ClothesContext } from '@/context/ClothesContext';
-import { Separator } from '@radix-ui/react-separator';
+import { useRouter } from 'next/navigation';
+import { useContext } from 'react';
 
-export const Navbar = () => {
+export const NavbarSection = () => {
   const router = useRouter();
-  const [open, setOpen] = useState(false);
   const context = useContext(ClothesContext);
 
   if (!context) {
@@ -16,17 +13,13 @@ export const Navbar = () => {
   }
 
   const { values, setValues } = context;
+
   console.log(values);
 
-  const handleClick = () => {
-    setOpen(!open);
-    console.log(open);
-  };
-
   return (
-    <div className='flex flex-col fixed inset-0 z-10'>
+    <div className='flex flex-col'>
       <div className='bg-gray-100'>
-        <div className='flex justify-between container mx-auto h-9 items-center'>
+        <div className='flex justify-between items-center container mx-auto h-9'>
           <div className='flex items-center gap-6'>
             <button onClick={() => router.push('/jordan')}>
               <Jordan size={20} />
@@ -42,24 +35,25 @@ export const Navbar = () => {
             >
               Find a Store
             </button>
-            <Separator className='h-3 w-px bg-black' />
+            <Separator orientation='vertical' className='h-3 bg-black' />
             <button
               className='hover:text-gray-500'
               onClick={() => router.push('/help')}
             >
               Help
             </button>
-            <Separator className='h-3 w-px bg-black' />
+            <Separator orientation='vertical' className='h-3 bg-black' />
+
             <button
               className='hover:text-gray-500'
               onClick={() => router.push('/membership')}
             >
               Join Us
             </button>
-            <Separator className='h-3 w-px bg-black' />
+            <Separator orientation='vertical' className='h-3 bg-black' />
             <button
               className='hover:text-gray-500'
-              onClick={() => router.push('/signin')}
+              onClick={() => router.push('/sign-in')}
             >
               Sign In
             </button>
@@ -67,7 +61,7 @@ export const Navbar = () => {
         </div>
       </div>
       <div className='bg-white'>
-        <div className='flex justify-between container items-center mx-auto h-14'>
+        <div className='flex justify-between items-center container mx-auto h-14'>
           <div>
             <button onClick={() => router.push('/')}>
               <Nike />
@@ -80,7 +74,6 @@ export const Navbar = () => {
             <button onClick={() => router.push('/kids')}>Kids</button>
             <button onClick={() => router.push('/jordan')}>Jordan</button>
             <button onClick={() => router.push('/sales')}>Sale</button>
-            <button onClick={handleClick}>openOrnot</button>
           </div>
           <div className='flex items-center gap-4'>
             <input

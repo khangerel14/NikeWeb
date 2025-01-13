@@ -6,5 +6,13 @@ type Props = Readonly<{
 }>;
 
 export const Jordan = ({ size }: Props) => {
-  return <Image src={jor.src} alt='jordan' width={size} height={size} />;
+  return (
+    <Image
+      src={jor}
+      alt='jordan'
+      width={size}
+      height={size}
+      style={{ width: `${size}px`, height: `${size}px` }}
+    />
+  );
 };

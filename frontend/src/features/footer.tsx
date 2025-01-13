@@ -57,7 +57,7 @@ const data: Ulti[] = [
 
 export const Footer = () => {
   return (
-    <div className='w-[1344px] flex flex-col mx-auto'>
+    <div className='w-[1344px] flex flex-col mx-auto mt-28'>
       <hr />
       <div className='flex items-center w-full justify-between mt-16'>
         <div className='flex items-center w-full font-medium gap-2'>
