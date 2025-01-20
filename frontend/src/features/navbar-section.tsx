@@ -22,7 +22,7 @@ export const NavbarSection = () => {
         <div className='flex justify-between items-center container mx-auto h-9'>
           <div className='flex items-center gap-6'>
             <button onClick={() => router.push('/jordan')}>
-              <Jordan size={20} />
+              <Jordan size={24} />
             </button>
             <button onClick={() => router.push('/converse')}>
               <Converse />
@@ -43,7 +43,6 @@ export const NavbarSection = () => {
               Help
             </button>
             <Separator orientation='vertical' className='h-3 bg-black' />
-
             <button
               className='hover:text-gray-500'
               onClick={() => router.push('/membership')}

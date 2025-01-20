@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Card, CardContent } from '@/components/ui/card';
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuid } from 'uuid';
 import {
   Carousel,
   CarouselContent,
@@ -10,16 +10,16 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 
-export function CarouselDemo() {
+export function CarouselSpacing() {
   return (
-    <Carousel className='mx-auto pt-10 mt-20 w-full max-w-xs'>
-      <CarouselContent>
+    <Carousel className='w-full container mx-auto py-10'>
+      <CarouselContent className='-ml-1 w-full'>
         {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={uuidv4()}>
+          <CarouselItem key={uuid()} className='pl-1 md:basis-1/2 lg:basis-1/3'>
             <div className='p-1'>
-              <Card>
+              <Card className='w-96'>
                 <CardContent className='flex aspect-square items-center justify-center p-6'>
-                  <span className='text-4xl font-semibold'>{index + 1}</span>
+                  <span className='text-2xl font-semibold'>{index + 1}</span>
                 </CardContent>
               </Card>
             </div>
