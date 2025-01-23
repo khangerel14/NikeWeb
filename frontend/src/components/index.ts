@@ -1,5 +1,9 @@
 export * from './help-hover';
 
-export * from './Card';
+export * from './custom-card';
 
-export * from './Paginations';
+export * from './paginations';
+
+export * from './custom-accordion';
+
+export * from './carousel-spacing';

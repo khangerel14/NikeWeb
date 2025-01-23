@@ -13,7 +13,7 @@ type ProductProps = Readonly<{
   price: number;
 }>;
 
-export const Card = () => {
+export const CustomCard = () => {
   const { clothesData = [], values = '' } = useContext(ClothesContext) || {};
   const [currentImageIndex, setCurrentImageIndex] = useState<number[]>([]);
 
