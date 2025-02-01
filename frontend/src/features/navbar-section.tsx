@@ -19,7 +19,7 @@ export const NavbarSection = () => {
   return (
     <div className='flex flex-col'>
       <div className='bg-gray-100'>
-        <div className='flex justify-between items-center container mx-auto h-9'>
+        <div className='flex justify-between items-center container h-9'>
           <div className='flex items-center gap-6'>
             <button onClick={() => router.push('/jordan')}>
               <Jordan size={24} />
@@ -60,7 +60,7 @@ export const NavbarSection = () => {
         </div>
       </div>
       <div className='bg-white'>
-        <div className='flex justify-between items-center container mx-auto h-14'>
+        <div className='flex justify-between items-center container h-14'>
           <div>
             <button onClick={() => router.push('/')}>
               <Nike />

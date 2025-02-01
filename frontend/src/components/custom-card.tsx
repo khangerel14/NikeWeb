@@ -20,15 +20,19 @@ export const CustomCard = () => {
   useEffect(() => {
     setCurrentImageIndex(clothesData.map(() => 0));
 
+    const updateImageIndex = (index: number, imagesLength: number) => {
+      setCurrentImageIndex((prevIndex) => {
+        const newIndex = [...prevIndex];
+        if (imagesLength > 0) {
+          newIndex[index] = (newIndex[index] + 1) % imagesLength;
+        }
+        return newIndex;
+      });
+    };
+
     const intervalIds = clothesData.map((elem: ProductProps, index: number) => {
       return setInterval(() => {
-        setCurrentImageIndex((prevIndex) => {
-          const newIndex = [...prevIndex];
-          if (elem.images.length > 0) {
-            newIndex[index] = (newIndex[index] + 1) % elem.images.length;
-          }
-          return newIndex;
-        });
+        updateImageIndex(index, elem.images.length);
       }, 4000);
     });
 

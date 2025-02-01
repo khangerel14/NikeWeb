@@ -1,6 +1,7 @@
 'use client';
 
 import { Globe } from '@/assets/icons';
+import { useRouter } from 'next/navigation';
 import { v4 as uuidv4 } from 'uuid';
 
 type Ulti = {
@@ -56,6 +57,7 @@ const data: Ulti[] = [
 ];
 
 export const Footer = () => {
+  const router = useRouter();
   return (
     <div className='w-[1344px] flex flex-col mx-auto mt-28'>
       <hr />
@@ -70,7 +72,11 @@ export const Footer = () => {
                 <button className='text-sm'>{e.title}</button>
                 <div className='flex flex-col gap-2 items-start'>
                   {e.btn.map((buttonText) => (
-                    <button key={uuidv4()} className='text-gray-500'>
+                    <button
+                      key={uuidv4()}
+                      className='text-gray-500'
+                      onClick={() => router.push('/not-found-404')}
+                    >
                       {buttonText}
                     </button>
                   ))}
@@ -80,7 +86,10 @@ export const Footer = () => {
           })}
         </div>
         <div className='flex justify-end h-96'>
-          <button className='text-gray-500 flex items-start h-14 gap-2 w-32 text-sm font-medium'>
+          <button
+            className='text-gray-500 flex items-start h-14 gap-2 w-32 text-sm font-medium'
+            onClick={() => router.push('/not-found-404')}
+          >
             <Globe />
             United States
           </button>

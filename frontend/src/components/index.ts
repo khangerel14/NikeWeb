@@ -7,3 +7,7 @@ export * from './paginations';
 export * from './custom-accordion';
 
 export * from './carousel-spacing';
+
+export * from './navigation-menu-demo';
+
+export * from './drawer-demo';

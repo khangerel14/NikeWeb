@@ -2,7 +2,7 @@ import { Jordan, Nike } from '@/assets/icons';
 
 export const SignIn = () => {
   return (
-    <div className='container w-[520px] mx-auto mt-10'>
+    <div className='container w-[520px] mt-10'>
       <div className='flex flex-col gap-9'>
         <div className='flex'>
           <Nike />
