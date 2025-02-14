@@ -64,8 +64,9 @@ export const NavigationMenuDemo = () => {
               <li className='row-span-3'>
                 <NavigationMenuLink asChild>
                   <a
+                    target='_blank'
                     className='flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md'
-                    href='/'
+                    href='http://103.50.205.212:8082/home/'
                   >
                     <Image src={Icons} alt='logo' width={100} height={100} />
                     <div className='mb-2 mt-4 text-lg font-medium'>
@@ -97,8 +98,9 @@ export const NavigationMenuDemo = () => {
               <li className='row-span-3'>
                 <NavigationMenuLink asChild>
                   <a
+                    target='_blank'
                     className='flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md'
-                    href='/'
+                    href='http://103.50.205.212:8082/home/'
                   >
                     <Image src={Icons} alt='logo' width={100} height={100} />
                     <div className='mb-2 mt-4 text-lg font-medium'>

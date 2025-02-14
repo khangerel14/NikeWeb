@@ -1,3 +1,5 @@
+'use client';
+
 import { Cart, Converse, Favourite, Jordan, Nike } from '@/assets/icons';
 import { Separator } from '@/components/ui/separator';
 import { ClothesContext } from '@/context/ClothesContext';
@@ -13,8 +15,6 @@ export const NavbarSection = () => {
   }
 
   const { values, setValues } = context;
-
-  console.log(values);
 
   return (
     <div className='flex flex-col'>

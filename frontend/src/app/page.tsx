@@ -1,21 +1,21 @@
 'use client';
 
-import { Footer, NavbarSection } from '@/features';
+import { Footer } from '@/features';
 import ClothesContextProvider from '@/context/ClothesContext';
 import {
-  Paginations,
   CustomAccordion,
   CarouselSpacing,
   NavigationMenuDemo,
 } from '@/components';
+import { SelectSection } from '@/features/select-section';
 
 const Page = () => {
   return (
     <ClothesContextProvider>
-      <NavbarSection />
       <NavigationMenuDemo />
       <CarouselSpacing />
-      <Paginations />
+      {/* <StoriesSection /> */}
+      <SelectSection />
       <CustomAccordion />
       <Footer />
     </ClothesContextProvider>
