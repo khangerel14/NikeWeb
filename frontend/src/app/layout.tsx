@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
-import { NavbarSection } from '@/features';
+import { NavbarSection, WithSideBarSection } from '@/features';
 import ClothesContextProvider from '@/context/ClothesContext';
 
 const geistSans = localFont({
@@ -32,6 +32,7 @@ export default function RootLayout({
       >
         <ClothesContextProvider>
           <NavbarSection />
+          <WithSideBarSection />
         </ClothesContextProvider>
         {children}
       </body>

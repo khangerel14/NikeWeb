@@ -1,11 +1,12 @@
 'use client';
 
-import { Footer } from '@/features';
+import { FavouriteSection, Footer } from '@/features';
 import ClothesContextProvider from '@/context/ClothesContext';
 
 const Page = () => {
   return (
     <ClothesContextProvider>
+      <FavouriteSection />
       <Footer />
     </ClothesContextProvider>
   );

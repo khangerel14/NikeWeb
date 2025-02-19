@@ -7,7 +7,7 @@ import {
   CarouselSpacing,
   NavigationMenuDemo,
 } from '@/components';
-import { SelectSection } from '@/features/select-section';
+import { TabsDemo } from '@/features/select-section';
 
 const Page = () => {
   return (
@@ -15,7 +15,7 @@ const Page = () => {
       <NavigationMenuDemo />
       <CarouselSpacing />
       {/* <StoriesSection /> */}
-      <SelectSection />
+      <TabsDemo />
       <CustomAccordion />
       <Footer />
     </ClothesContextProvider>

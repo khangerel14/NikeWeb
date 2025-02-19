@@ -1,5 +1,7 @@
 import type { Config } from 'tailwindcss';
 
+import myPlugin from 'tailwindcss/plugin';
+
 const config: Config = {
   darkMode: ['class'],
   content: [
@@ -107,8 +109,133 @@ const config: Config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      fontSize: {
+        h1: [
+          '47px',
+          {
+            lineHeight: '52px',
+            fontWeight: 800,
+          },
+        ],
+        h2: [
+          '45px',
+          {
+            lineHeight: '52px',
+            fontWeight: 700,
+          },
+        ],
+        h3: [
+          '36px',
+          {
+            lineHeight: '44px',
+            fontWeight: 700,
+          },
+        ],
+        h4: [
+          '32px',
+          {
+            lineHeight: '40px',
+            fontWeight: 700,
+          },
+        ],
+        h5: [
+          '28px',
+          {
+            lineHeight: '36px',
+            fontWeight: 700,
+          },
+        ],
+        h6: [
+          '24px',
+          {
+            lineHeight: '32px',
+            fontWeight: 700,
+          },
+        ],
+        title1: [
+          '22px',
+          {
+            lineHeight: '28px',
+            fontWeight: 600,
+          },
+        ],
+        title2: [
+          '16px',
+          {
+            lineHeight: '24px',
+            fontWeight: 600,
+          },
+        ],
+        title3: [
+          '14px',
+          {
+            lineHeight: '20px',
+            fontWeight: 600,
+          },
+        ],
+        body1: [
+          '22px',
+          {
+            lineHeight: '35px',
+            fontWeight: 400,
+          },
+        ],
+        body2: [
+          '16px',
+          {
+            lineHeight: '25.6px',
+            fontWeight: 400,
+          },
+        ],
+        body3: [
+          '14px',
+          {
+            lineHeight: '22.4px',
+            fontWeight: 400,
+          },
+        ],
+        body4: [
+          '12px',
+          {
+            lineHeight: '16px',
+            fontWeight: 400,
+          },
+        ],
+        label1: [
+          '20px',
+          {
+            lineHeight: '24px',
+            fontWeight: 600,
+          },
+        ],
+        label2: [
+          '16px',
+          {
+            lineHeight: '20px',
+            fontWeight: 600,
+          },
+        ],
+        label3: [
+          '14px',
+          {
+            lineHeight: '16px',
+            fontWeight: 600,
+          },
+        ],
+      },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    myPlugin(function ({ addUtilities }) {
+      addUtilities({
+        '.my-utility': {
+          property: 'value',
+        },
+      });
+    }),
+  ],
+  corePlugins: {
+    backdropFilter: true,
+  },
 };
 export default config;

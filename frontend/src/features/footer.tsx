@@ -59,7 +59,7 @@ const data: Ulti[] = [
 export const Footer = () => {
   const router = useRouter();
   return (
-    <div className='w-[1344px] flex flex-col mx-auto mt-28'>
+    <div className='w-[1344px] flex flex-col mx-auto my-28'>
       <hr />
       <div className='flex items-center w-full justify-between mt-16'>
         <div className='flex items-center w-full font-medium gap-2'>
