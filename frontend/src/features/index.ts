@@ -11,3 +11,5 @@ export * from './basket-section';
 export * from './favourite-section';
 
 export * from './with-side-bar-section';
+
+export * from './help-section';

@@ -8,12 +8,16 @@ import {
   NavigationMenuDemo,
 } from '@/components';
 import { TabsDemo } from '@/features/select-section';
+// import { SidebarProvider } from '@/components/ui/sidebar';
 
 const Page = () => {
   return (
     <ClothesContextProvider>
       <NavigationMenuDemo />
       <CarouselSpacing />
+      {/* <SidebarProvider>
+        <AppSidebar />
+      </SidebarProvider> */}
       {/* <StoriesSection /> */}
       <TabsDemo />
       <CustomAccordion />

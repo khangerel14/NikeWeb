@@ -18,7 +18,7 @@ export const BasketSection = () => {
   };
   return (
     <div className='container flex items-start justify-between my-10'>
-      <div className='flex items-start justify-between w-1/2 gap-5'>
+      <div className='flex items-start justify-between w-3/5'>
         <div className='flex flex-col gap-8'>
           <Image
             src={ima}
@@ -50,7 +50,7 @@ export const BasketSection = () => {
           className='w-4/6 rounded-lg'
         />
       </div>
-      <div className='flex flex-col justify-start items-start w-2/5 h-screen'>
+      <div className='flex flex-col justify-start items-start w-3/5 h-screen'>
         <div className='flex flex-col gap-5'>
           <div className='flex items-center gap-3'>
             <AvatarIcon />
