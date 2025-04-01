@@ -77,7 +77,7 @@ export const NavbarSection = () => {
           <div className='flex items-center gap-4'>
             <input
               type='search'
-              className='p-1 w-[170px] px-2 bg-gray-100 rounded-full outline-none'
+              className='p-1 w-[170px] px-2 bg-gray-100 rounded-full outline-hidden'
               placeholder='Search...'
               value={values}
               onChange={(e) => setValues(e.target.value)}

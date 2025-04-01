@@ -53,7 +53,7 @@ export const CustomCard = () => {
             className='relative flex w-full flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md pt-6'
             key={elem.id}
           >
-            <div className='relative mx-4 -mt-6 h-64 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600 hover:scale-110 transition ease-out'>
+            <div className='relative mx-4 -mt-6 h-64 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-linear-to-r from-blue-500 to-blue-600 hover:scale-110 transition ease-out'>
               {elem.images.length > 0 &&
               elem.images[currentImageIndex[idx]] &&
               elem.images[currentImageIndex[idx]] !== '' ? (

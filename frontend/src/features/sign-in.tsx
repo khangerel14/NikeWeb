@@ -18,7 +18,7 @@ export const SignIn = () => {
         <input
           type='text'
           placeholder='Email*'
-          className='border w-full p-4 rounded-md border-black outline-none'
+          className='border w-full p-4 rounded-md border-black outline-hidden'
         />
         <p className='text-gray-500'>
           By continuing, I agree to Nike’s

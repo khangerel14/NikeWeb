@@ -5,7 +5,7 @@ export const HelpSection = () => {
         <h1 className='text-4xl font-medium'>GET HELP</h1>
         <input
           type='text'
-          className='w-[450px] p-4 border rounded-xl border-black outline-none'
+          className='w-[450px] p-4 border rounded-xl border-black outline-hidden'
           placeholder='What can we help you with?'
         />
       </div>
